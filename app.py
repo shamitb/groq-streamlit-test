@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from typing import Generator
 from groq import Groq
@@ -12,7 +13,7 @@ st.subheader("Groq Chat Streamlit App",  anchor=False)
 st.text("near real-time responses")
 
 client = Groq(
-    api_key=st.secrets["GROQ_API_KEY"],
+    api_key=os.getenv("GROQ_API_KEY"),
 )
 
 # Initialize chat history and selected model
