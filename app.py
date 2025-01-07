@@ -13,7 +13,7 @@ st.subheader("Groq Chat Streamlit App",  anchor=False)
 st.text("near real-time responses")
 
 client = Groq(
-    api_key=os.getenv("GROQ_API_KEY"),
+    api_key=st.secrets["GROQ_API_KEY"],
 )
 
 # Initialize chat history and selected model
